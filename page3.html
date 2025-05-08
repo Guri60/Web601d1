@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My First Web Page</title>
+    </head>
+    <body>
+        <!--Container to wrap everything-->
+        <div id="container">
+            <!--Website Brand-->
+            <header>My Web Site Brand</header>
+            <!--Main Navigation-->
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="page2.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="page3.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!--End of Navigation-->
+            <!--Main Content-->
+            <main>
+                <h1>My Third Heading</h1>
+                <p>My Third Paragraph</p>
+                <form action="/signup" method="post">
+                    <fieldset>
+                        <legend>User Personal Information</legend>
+                        <label>Enter your full name</label><br>
+                        <input type="text" name="name"><br>
+                        <label>Enter your email</label><br>
+                        <input type="email" name="email"><br>
+                        <label>Enter your phone number</label><br>
+                        <input type="text" name="phone"><br>
+                        <br>
+                        <label>Select your gender</label><br>
+                        <input type="radio" name="gender" value="male">Male
+                        <input type="radio" name="gender" value="female">Female<br>
+                        <br>
+                        <label>How should we contact you?</label><br>
+                        <select>
+                            <option>Email</option>
+                            <option>Phone</option>
+                        </select><br>
+                        <br>
+                        Tell us the reason for your visit today:<br>
+                        <textarea rows="6" columns="30"></textarea><br>
+                        <input type="submit" value="Signup">
+
+                    </fieldset>
+                </form>
+            </main>
+            <!--End of Main Content-->
+            <!--Footer Information-->
+            <footer>&copy; Copyright 2025</footer>
+        </div>
+        <!--End of Content-->
+    </body>
+</html>
