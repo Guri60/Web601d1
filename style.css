@@ -91,3 +91,68 @@ header {
                 padding-top: 20px;
                 color: rgb(211, 218, 240);
               }
+              /* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption, .description {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  display: none;
+  border-radius: 4px;
+}
+
+.caption {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.gallery-item:hover .caption,
+.gallery-item:hover .description {
+  display: block;
+}
+
+.gallery-item:hover .description {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="images/winterland1.jpg" alt="Image 1">
+      <div class="caption"></div>
+      <div class="description"></div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/winterland2.jpg" alt="Image 2">
+      <div class="caption"></div>
+      <div class="description"></div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/winterland3.jpg" alt="Image 3">
+      <div class="caption"></div>
+      <div class="description"></div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript arrays for captions and descriptions
+    const captionTexts = ["Beautiful Sunset", "Nature at Its Best", "Urban Life"];
+    const descTexts = ["A stunning view of the sun setting over the horizon.", "A lush snow field surrounded by beautiful trees.", "Like a Heaven."];
+
+    // Variables for HTML tags
+    const openCaptionTag = '<div class="caption">';
+    const closeCaptionTag = '</div>';
+    const openDescTag = '<div class="description">';
+    const closeDescTag = '</div>';
+
+    // Function to populate captions and descriptions
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    galleryItems.forEach((item, index) => {
+      const captionElement = item.querySelector('.caption');
+      const descElement = item.querySelector('.description');
+      
+      captionElement.innerHTML = openCaptionTag + captionTexts[index] + closeCaptionTag;
+      descElement.innerHTML = openDescTag + descTexts[index] + closeDescTag;
+    });
+  </script>
+</body>
+</html>
+
