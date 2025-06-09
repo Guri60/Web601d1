@@ -7,7 +7,7 @@
         <!--Partners-->
         <script src="js/site_script.js"></script>
     </head>
-    <body>
+    <>
         <!--Container to wrap everything-->
         <div id="container">
             <!--Website Brand-->
@@ -40,11 +40,36 @@
                         <input type="radio" name="gender" value="male">Male
                         <input type="radio" name="gender" value="female">Female
                         <br>
-                        <label>How should we contact you?</label>
-                        <select>
-                            <option>Email</option>
-                            <option>Phone</option>
-                        </select><br>
+
+                        <main>
+    
+            <div class="contactinfo">
+                <div class="phone">
+                    <span>Phone:</span>
+                    <span>12367186</span>
+                </div>
+                <div class="email">
+                    <span>Email:</span>
+                    <span>info@Yahoo.com</span>
+                </div>
+            </div>
+            <form action="/contact" method="post">  
+            <fieldset>  
+                <legend>Contact Form</legend>
+                <div class="textbox">
+                    <label>Name:</label> 
+                    <input type="text" name="name" placeholder="John Doe">  
+                    <label>Email:</label>  
+                    <input type="email" name="email" placeholder="johndoe@gmail.com"> 
+                    <label>Phone:</label>
+                    <input type="text" name="phone" placeholder="xxx-xxx-xxxx"> 
+                </div>
+    
+                <div class="radios">
+                    <label>How should we contact you?</label>  
+                    <label><input type="radio" name="contact" value="email" checked>Email</label> 
+                    <label><input type="radio" name="contact" value="phone">Phone</label>
+                </div>
                         <br>
                         <label>Tell us the reason for your visit today:</label>
                         <textarea rows="6" columns="30"></textarea><br>
