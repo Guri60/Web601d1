@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Activity Selector</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 60%;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #f0f0f0;
+      font-weight: bold;
+      cursor: default;
+    }
+    .not-available {
+      background-color: #ddd;
+      color: #999;
+      cursor: not-allowed;
+    }
+    .selectable {
+      cursor: pointer;
+    }
+    .selected {
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<table id="activityTable">
+  <thead>
+    <tr>
+      <th>Activity</th>
+      <th>West Cliff</th>
+      <th>North Cliff</th>
+      <th>East Cliff</th>
+      <th>South Cliff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Hiking</th>
+      <td class="selectable">College Hikes</td>
+      <td class="selectable">Family Fun</td>
+      <td class="selectable">Treasure Tails</td>
+      <td class="selectable">Canyon Explorer</td>
+    </tr>
+    <tr>
+      <th>Kayak</th>
+      <td class="selectable">Western Kayak Meetup</td>
+      <td class="not-available">Not Available</td>
+      <td class="selectable">Youth Kayaking</td>
+      <td class="selectable">Kayak Down</td>
+    </tr>
+    <tr>
+      <th>Skydiving</th>
+      <td class="selectable">Seacliff Diving</td>
+      <td class="selectable">Sky is the limit</td>
+      <td class="not-available">Not Available</td>
+      <td class="selectable">Sky Diving for Beginners</td>
+    </tr>
+     <tr>
+      <th>Biking</th>
+      <td class="selectable">Bicycle for One</td>
+      <td class="not-available">Not Available</td>
+      <td class="selectable">Bike Meetup Group</td>
+      <td class="not-available">Not Available</td>
+    </tr>
+     <tr>
+      <th>Camping</th>
+      <td class="selectable">Youth Camp</td>
+      <td class="selectable">Rent a Tent</td>
+      <td class="selectable">Campground Adventure</td>
+      <td class="selectable">Sunset Camping</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#activityTable td.selectable').on('click', function () {
+      $(this).toggleClass('selected');
+    });
+  });
+</script>
+
+</body>
+</html>
